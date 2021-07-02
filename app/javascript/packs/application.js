@@ -13,5 +13,15 @@ Turbolinks.start()
 ActiveStorage.start()
 //=require jquery
 // Loads all Semantic javascripts
-//= require semantic-ui
+// = require semantic-ui
 //= require_tree .
+require("semantic-ui-sass")
+
+// $(document).on("turbolinks:load", function(){
+//   $('.ui.dropdown')
+//   .dropdown();
+// })
+
+$(function(){
+  $('.ui.dropdown').dropdown();
+})
