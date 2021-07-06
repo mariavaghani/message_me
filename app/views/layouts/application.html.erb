@@ -8,11 +8,21 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+  </head>
   <body>
+
     <%= render "layouts/navigation" %>
+    <h2 class="ui center aligned icon header">
+      <i class="blue bullhorn icon"></i>
+      Spill The Tea Room
+    </h2>
+    <div class="ui container">
+      <%= render 'layouts/messages' %>
+    </div>
+
     <%= yield %>
   </body>
 </html>

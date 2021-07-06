@@ -1,0 +1,30 @@
+<%= render 'shared/errors', obj: @user %>
+
+
+<div class="ui center aligned grid mt-40">
+  <%= form_with(model: @user, local: true) do |f| %>
+    <div class="ui placeholder segment">
+      <div class="column">
+        <div class="ui form wdt-600">
+          <div class="field">
+            <%= f.label :username  %>
+            <div class="ui left icon input wdt-600">
+              <%= f.text_field :username, class: "form-control text-center wdt-600", placeholder: "enter username" %>
+              <i class="user icon"></i>
+            </div>
+          </div>
+          <div class="field">
+            <%= f.label :password  %>
+            <div class="ui left icon input">
+              <%= f.password_field :password, class: "form-control text-center", placeholder: 'enter password' %>
+              <i class="lock icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="middle aligned column">
+        <%= f.submit "Sign Up", class: "ui big button mt-40" %>
+      </div>
+    </div>
+  <% end %>
+</div>
