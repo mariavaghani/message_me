@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'chatroom', to: "chatroom#index"
   get "signup", to: 'users#new'
   resources :users, except: [:new]
+  post "message", to: "messages#create"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
